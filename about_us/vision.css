@@ -1,0 +1,77 @@
+body {
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+h3 {
+  text-align: center;
+  font-size: 24px;
+}
+
+article p {
+  font-size: 14px; /* Set font size in pixels */
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px auto;
+  line-height: 1.5;
+  max-width: 1300px;
+  font-size: 1.3em;
+  padding: 10px;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+
+/* Here's the image slider */
+.container {
+  padding: 2px;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9; /* Since the images are square, keep the aspect ratio 1:1 */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  width: 100%;
+  height: auto;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: contain; /* This ensures the whole square image fits inside without being cut */
+  width: 100%;
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+/* Here ends the image slider */
