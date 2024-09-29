@@ -1,0 +1,38 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+/* Responsive Container */
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Responsive Typography */
+article h1 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 10vw; /* Makes the font-size responsive */
+  line-height: 1.2;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  article h1 {
+    font-size: 5rem;
+  }
+
+  article p {
+    font-size: 1.4rem;
+  }
+}

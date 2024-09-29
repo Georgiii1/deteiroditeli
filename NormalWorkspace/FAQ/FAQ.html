@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="FAQ.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="/newlogo-no.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>Често задавани въпроси - Дете и родители</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $('#header').load("/contents/header.html");
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $('#footer').load("/contents/footer.html");
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <div id="header"></div>
+    <article>
+        <h1>Често задавани въпроси</h1>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <i class="fa fa-search search-icon"></i>
+            <input type="text" id="faqSearch" onkeyup="searchFAQs()" placeholder="Въпроси...">
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="faq-item">
+                <button onclick="toggleFAQ(this)">1. Защо е важно за родителите и децата да имат здрава връзка?</button>
+                <div class="faq-content">
+                    <p>Изграждането на силна връзка между родители и деца насърчава доверието, емоционалната сигурност и
+                        открита комуникация. Помага за развитието и благосъстоянието на детето, създавайки основа
+                        за здрава връзка през целия им живот.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleFAQ(this)">2. Как родителите могат да подобрят отношенията си с децата
+                    си?</button>
+                <div class="faq-content">
+                    <p>Родителите могат да подобрят отношенията си с децата си, като прекарват качествено време заедно,
+                        слушане активно, показване на съпричастност и поставяне на ясни граници, като същевременно
+                        оказва подкрепа и
+                        любящ.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleFAQ(this)">3. Каква роля играе комуникацията в отношенията родител-дете?</button>
+                <div class="faq-content">
+                    <p>Комуникацията е от решаващо значение в отношенията родител-дете. Открит, честен и уважителен
+                        комуникацията помага за разрешаване на конфликти, разбиране на нуждите на другия и укрепване на
+                        връзката
+                        между родители и деца.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleFAQ(this)">4. Как семейната динамика влияе върху развитието на децата?</button>
+                <div class="faq-content">
+                    <p>Семейната динамика, включително връзката между родителите и техните деца, значително
+                        влияят върху емоционалното, социалното и когнитивното развитие на детето. Положителната динамика
+                        може да доведе до
+                        здравословен растеж, докато негативната динамика може да предизвика предизвикателства в живота
+                        на детето.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button onclick="toggleFAQ(this)">5. Как могат семействата да останат свързани въпреки натоварените
+                    графици?</button>
+                <div class="faq-content">
+                    <p>Семействата могат да останат свързани, като отделят редовно време за дейности заедно, поддържайки
+                        отворена комуникация и използване на технологии за поддържане на връзка. Даването на приоритет
+                        на семейното време помага
+                        поддържайте силни връзки, дори когато животът е натоварен.</p>
+                </div>
+            </div>
+        </section>
+        <div id="noResults" style="display: none; text-align: center; margin-top: 20px;">
+            <p>Няма намерени резултати</p>
+        </div>
+    </article>
+    <div id="footer"></div>
+
+    <script>
+        // Function to toggle FAQ visibility
+        function toggleFAQ(element) {
+            element.classList.toggle("active");
+            var content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        // Function to search through FAQs
+        function searchFAQs() {
+            var input, filter, faqSection, faqItems, button, i, txtValue, noResults;
+            input = document.getElementById("faqSearch");
+            filter = input.value.toUpperCase();
+            faqSection = document.querySelector(".faq");
+            faqItems = faqSection.getElementsByClassName("faq-item");
+            noResults = document.getElementById("noResults");
+
+            let hasVisibleItems = false;
+
+            for (i = 0; i < faqItems.length; i++) {
+                button = faqItems[i].getElementsByTagName("button")[0];
+                txtValue = button.textContent || button.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    faqItems[i].style.display = "";
+                    hasVisibleItems = true;
+                } else {
+                    faqItems[i].style.display = "none";
+                }
+            }
+
+            // Display "No results found" if no items are visible
+            if (!hasVisibleItems) {
+                noResults.style.display = "block";
+            } else {
+                noResults.style.display = "none";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

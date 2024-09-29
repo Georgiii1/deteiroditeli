@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Existing Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/contents/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/dr-no.png" />
+    <title>Дете и родители</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/index.html">
+          <img class="logo" src="/dr-no.png" alt="logo" />
+        </a>
+        <h1 class="header-heading">Дете и родители</h1>
+      </div>
+    </header>
+
+    <nav class="nav-box">
+      <button class="hamburger" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <ul class="nav-links">
+        <li>
+          <a href="#">За Нас &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="/about_us/mission.html" title="Expand menu Мисия">Мисия</a></li>
+            <li><a href="/about_us/Vision.html" title="Expand menu Визия">Визия</a></li>
+            <li><a href="/about_us/team.html" title="Expand menu Екип">Екип</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Информиране и консултиране &#9662;</a>
+          <ul class="dropdown">
+            <li>
+              <a href="/info_and_consultation/school_prep.html" title="Expand menu Подготовка за училище"
+                >Подготовка за училище</a
+              >
+            </li>
+            <li>
+              <a href="/info_and_consultation/individual_consultation.html" title="Expand menu Индивидуални консултации"
+                >Индивидуални консултации</a
+              >
+            </li>
+            <li>
+              <a href="/info_and_consultation/individual_sessions.html" title="Expand menu Индивидуални сесии"
+                >Индивидуални сесии</a
+              >
+            </li>
+            <li><a href="https://moodle.org" title="Expand menu Цени">Връзка към Moodle</a></li>
+            <li><a href="/info_and_consultation/prices.html" title="Expand menu Цени">Цени</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Квалификация &#9662;</a>
+          <ul class="dropdown">
+            <li>
+              <a href="/qualifications_team/list_of_qualifications.html" title="Expand menu Квалификация на педагогически специалисти"
+                >Квалификация на педагогически специалисти</a
+              >
+            </li>
+            <li>
+              <a href="/qualifications_team/other.html" title="Expand menu Консултиране на отделен казус"
+                >Консултиране на отделен казус</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/projects/projects.html" title="Expand menu Проекти"
+            >Проекти &#9656;</a
+          >
+        </li>
+        <li>
+          <a
+            href="/book/prices_and_calendar.html"
+            title="Expand menu Запази час"
+            >Запази час &#9656;</a
+          >
+        </li>
+
+        <li>
+          <a href="https://hestiabg.com/bg/" target="_blank" title="Expand menu Диагностика"
+            >Диагностика &#9656;</a
+          >
+        </li>
+
+      </ul>
+
+      <div class="icons">
+        <div class="socials">
+          <div class="social-icon">
+            <a href="/index.html"><i class="fa fa-home"></i></a>
+          </div>
+          <div class="social-icon">
+            <a href="https://www.instagram.com/deteiroditeli/" target="_blank"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </div>
+          <div class="social-icon">
+            <a href="https://www.facebook.com/" target="_blank"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </div>
+          <div class="social-icon">
+            <a href="https://bg.linkedin.com/" target="_blank"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </div>
+          <div class="social-icon">
+            <a href="https://www.youtube.com/@dete_roditeli" target="_blank"
+              ><i class="fa fa-youtube-play" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".hamburger").click(function () {
+          $(".nav-links").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

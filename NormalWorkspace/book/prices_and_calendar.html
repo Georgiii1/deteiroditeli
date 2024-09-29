@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+    <link rel="stylesheet" type="text/css" href="prices.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/newlogo-no.png" />
+    <title>Запазете час - Дете и родители</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("/contents/header.html");
+      });
+      $(function () {
+        $("#footer").load("/contents/footer.html");
+      });
+    </script>
+  </head>
+
+  <body style="position: relative; margin: 0; padding: 0">
+    <div id="header"></div>
+    <article class="content-container">
+      <div class="relative">
+        <h1>Запазете час</h1>
+        <p>
+          Запази час лесно и удобно с нашата система за онлайн резервации, а ако
+          предпочиташ да ни се обадиш директно, използвай бутона по-долу!
+        </p>
+      </div>
+      <p>Кърджали: <a href="tel:087 799 8019">087 799 8019</a></p>
+      <p>София: <a href="+359 87 8354823">+359 87 8354823</a></p>
+      <p>
+        <i class="fa fa-envelope"></i>
+        Email:
+        <a href="mailto:office.dete.roditeli@gmail.com">office.dete.roditeli@gmail.com</a>
+      </p>
+    </article>
+    <div id="footer"></div>
+  </body>
+</html>

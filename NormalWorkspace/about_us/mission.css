@@ -1,0 +1,39 @@
+body {
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+h3 {
+  text-align: center;
+  font-size: 24px;
+}
+
+article p {
+  font-size: 1.3em;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 500;
+  margin: auto;
+  line-height: 1.5;
+  max-width: 1300px;
+  padding: 10px;
+  letter-spacing: 0.01em;
+  color: #333;
+  text-align: justify;
+}
+
+.img {
+  margin: 15px 20px 0px 100px;
+  width: 25%;
+  float: left;
+}
+
+@media (max-width: 768px) {
+  article p {
+    text-align: justify;
+  }
+
+  .img {
+    width: 45%;
+    margin: 20px;
+  }
+}
